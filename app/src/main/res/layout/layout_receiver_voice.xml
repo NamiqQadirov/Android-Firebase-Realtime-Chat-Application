@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:padding="8dp">
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/cardView"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="215dp"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="139dp"
+                android:layout_height="52dp"
+                android:layout_gravity="right"
+                android:background="@drawable/rounded_corner"
+                android:padding="4dp"
+                android:textColor="#000"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imageView2"
+                android:layout_toEndOf="@+id/imageView2" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView2"
+                android:layout_width="65dp"
+                android:layout_height="49dp"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="right"
+                android:paddingLeft="22dp"
+                android:src="@drawable/user_pacific" />
+
+            <ImageView
+                android:id="@+id/player"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:foregroundGravity="left"
+                app:srcCompat="@drawable/play"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView2"
+                android:layout_toEndOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/downloading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView6"
+                android:layout_marginTop="22dp"
+                android:layout_toEndOf="@+id/player"
+                android:layout_toRightOf="@+id/player"
+                android:text="Downloading"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

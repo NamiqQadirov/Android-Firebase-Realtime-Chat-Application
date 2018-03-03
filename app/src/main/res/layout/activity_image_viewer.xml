@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_register"
+    tools:context="com.example.namiq.egisterpp.activities.ImageViewer">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/image_profile"
+                android:layout_marginLeft="9dp"
+                android:layout_marginStart="9dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView4"
+                android:layout_toEndOf="@+id/imageView4" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:layout_toEndOf="@+id/profile_image"
+                android:layout_toRightOf="@+id/profile_image"
+                android:text="User"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:onClick="goBack"
+                app:srcCompat="@drawable/go_back" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/mainImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="103dp" />
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/image_profile"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView4"
+                android:layout_toEndOf="@+id/imageView4"
+                android:layout_marginLeft="9dp"
+                android:layout_marginStart="9dp" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:layout_toEndOf="@+id/profile_image"
+                android:layout_toRightOf="@+id/profile_image"
+                android:text="User"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:onClick="goBack"
+                app:srcCompat="@drawable/go_back" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background"
+        android:layout_below="@+id/mainToolbar">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.98"
+            android:hint="Enter name for Image" />
+
+        <Button
+            android:id="@+id/buttonChoose"
+            android:layout_width="46dp"
+            android:layout_height="36dp"
+            android:background="@android:drawable/ic_menu_send" />
+
+
+    </LinearLayout>
+
+    <com.nightonke.boommenu.BoomMenuButton
+        android:focusable="true"
+        android:id="@+id/bmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+    </com.nightonke.boommenu.BoomMenuButton>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:layout_marginLeft="107dp"
+        android:layout_marginStart="107dp"
+        android:layout_above="@+id/recyclerView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

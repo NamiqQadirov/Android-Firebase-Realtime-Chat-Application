@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.namiq.egisterpp">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ChatActivity"
+            android:label="Chat"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+
+        <service
+            android:name=".services.BackgroundService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.bgfirebaseapp.MyService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.MainProfileActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.UserProfileActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.MapActivity"
+            android:theme="@style/AppThemeMap" />
+        <activity
+            android:name=".activities.ImageViewer"
+            android:parentActivityName=".activities.ChatActivity"
+            android:theme="@style/AppThemeForImageView">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.ChatActivity" />
+            >
+        </activity>
+        <activity android:name=".activities.VoiceRecorder" android:theme="@style/AppThemeForImageView"></activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppThemeMap"/>
+    </application>
+
+</manifest>
